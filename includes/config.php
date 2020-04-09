@@ -1,3 +1,8 @@
 <?php
-$connect = new PDO('mysql:host=localhost;dbname=project1', 'root', '');
-$dir = '/';
+$hostname = "localhost";
+$database = "calendar";
+$username = "root";
+$password = "";
+
+$connect = new PDO("mysql:host=$hostname;dbname=$database", $username, $password);
+$dir='/';
