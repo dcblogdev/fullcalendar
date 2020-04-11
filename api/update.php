@@ -12,7 +12,7 @@ if (isset($_POST['id'])) {
     //optional fields
     $title      = isset($_POST['title']) ? $_POST['title']: '';
     $color      = isset($_POST['color']) ? $_POST['color']: '';
-    $text_color = isset($_POST['textColor']) ? $_POST['textColor']: '';
+    $text_color = isset($_POST['text_color']) ? $_POST['text_color']: '';
 
     //validation
     if ($start == '') {
