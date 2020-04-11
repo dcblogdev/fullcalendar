@@ -1,0 +1,5 @@
+{
+    "require": {
+        "daveismyname/pdo-wrapper": "^1.1"
+    }
+}

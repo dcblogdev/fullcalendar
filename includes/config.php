@@ -1,8 +1,11 @@
 <?php
-$hostname = "localhost";
+require('../vendor/autoload.php');
+
+use Daveismyname\PdoWrapper\Database;
+
+$host = "localhost";
 $database = "calendar";
 $username = "root";
 $password = "";
 
-$connect = new PDO("mysql:host=$hostname;dbname=$database", $username, $password);
-$dir='/';
+$db = Database::get($username, $password, $database, $host);
