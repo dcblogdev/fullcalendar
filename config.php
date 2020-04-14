@@ -1,5 +1,5 @@
 <?php
-require('../vendor/autoload.php');
+require('vendor/autoload.php');
 
 use Daveismyname\PdoWrapper\Database;
 
@@ -9,3 +9,4 @@ $username = "root";
 $password = "";
 
 $db = Database::get($username, $password, $database, $host);
+$dir = "./";

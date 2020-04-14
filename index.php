@@ -1,29 +1,30 @@
+<?php require('config.php');?>
 <!DOCTYPE html>
 <html>
 <head>
     <title>Calandar</title>
     
-    <link href='/packages/core/main.css' rel='stylesheet' />
-    <link href='/packages/daygrid/main.css' rel='stylesheet' />
-    <link href='/packages/timegrid/main.css' rel='stylesheet' />
-    <link href='/packages/list/main.css' rel='stylesheet' />
-    <link href='/packages/bootstrap/css/bootstrap.css' rel='stylesheet' />
-    <link href="/packages/jqueryui/custom-theme/jquery-ui-1.10.4.custom.min.css" rel="stylesheet">
-    <link href='/packages/datepicker/datepicker.css' rel='stylesheet' />
-    <link href='/packages/colorpicker/bootstrap-colorpicker.min.css' rel='stylesheet' />
-    <link href='/style.css' rel='stylesheet' />
+    <link href='<?=$dir;?>packages/core/main.css' rel='stylesheet' />
+    <link href='<?=$dir;?>packages/daygrid/main.css' rel='stylesheet' />
+    <link href='<?=$dir;?>packages/timegrid/main.css' rel='stylesheet' />
+    <link href='<?=$dir;?>packages/list/main.css' rel='stylesheet' />
+    <link href='<?=$dir;?>packages/bootstrap/css/bootstrap.css' rel='stylesheet' />
+    <link href="<?=$dir;?>packages/jqueryui/custom-theme/jquery-ui-1.10.4.custom.min.css" rel="stylesheet">
+    <link href='<?=$dir;?>packages/datepicker/datepicker.css' rel='stylesheet' />
+    <link href='<?=$dir;?>packages/colorpicker/bootstrap-colorpicker.min.css' rel='stylesheet' />
+    <link href='<?=$dir;?>style.css' rel='stylesheet' />
 
-    <script src='/packages/core/main.js'></script>
-    <script src='/packages/daygrid/main.js'></script>
-    <script src='/packages/timegrid/main.js'></script>
-    <script src='/packages/list/main.js'></script>
-    <script src='/packages/interaction/main.js'></script>
-    <script src='/packages/jquery/jquery.js'></script>
-    <script src='/packages/jqueryui/jqueryui.min.js'></script>
-    <script src='/packages/bootstrap/js/bootstrap.js'></script>
-    <script src='/packages/datepicker/datepicker.js'></script>
-    <script src='/packages/colorpicker/bootstrap-colorpicker.min.js'></script>
-    <script src='/calendar.js'></script>
+    <script src='<?=$dir;?>packages/core/main.js'></script>
+    <script src='<?=$dir;?>packages/daygrid/main.js'></script>
+    <script src='<?=$dir;?>packages/timegrid/main.js'></script>
+    <script src='<?=$dir;?>packages/list/main.js'></script>
+    <script src='<?=$dir;?>packages/interaction/main.js'></script>
+    <script src='<?=$dir;?>packages/jquery/jquery.js'></script>
+    <script src='<?=$dir;?>packages/jqueryui/jqueryui.min.js'></script>
+    <script src='<?=$dir;?>packages/bootstrap/js/bootstrap.js'></script>
+    <script src='<?=$dir;?>packages/datepicker/datepicker.js'></script>
+    <script src='<?=$dir;?>packages/colorpicker/bootstrap-colorpicker.min.js'></script>
+    <script src='<?=$dir;?>calendar.js'></script>
 </head>
 <body>
 
@@ -180,6 +181,8 @@
 </div><!-- /.modal -->
 
 <div class="container">
+
+    <p><br>Read the full <a href="https://demos.dcblog.dev/Jquery-fullcalendar-with-php-and-mysql/">jQuery Fullcalender with PHP and MySQL</a> Tutorial</p>
 
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addeventmodal">
       Add Event

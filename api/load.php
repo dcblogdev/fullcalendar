@@ -1,5 +1,5 @@
 <?php
-include("../includes/config.php");
+include("../config.php");
 $data = [];
 
 $result = $db->select("* FROM events ORDER BY id");

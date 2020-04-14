@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
 
+    var url ='/';
+
     $('body').on('click', '.datetimepicker', function() {
         $(this).not('.hasDateTimePicker').datetimepicker({
             controlType: 'select',
@@ -27,7 +29,8 @@ document.addEventListener('DOMContentLoaded', function() {
         navLinks: true, // can click day/week names to navigate views
         businessHours: true, // display business hours
         editable: true,
-        events: '/api/load.php',
+        defaultDate: '2020-04-07',
+        events: url+'api/load.php',
         eventDrop: function(arg) {
             var start = arg.event.start.toDateString()+' '+arg.event.start.getHours()+':'+arg.event.start.getMinutes()+':'+arg.event.start.getSeconds();
             if (arg.event.end == null) {
@@ -37,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             $.ajax({
-              url:"/api/update.php",
+              url:url+"api/update.php",
               type:"POST",
               data:{id:arg.event.id, start:start, end:end},
             });
@@ -47,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
             var end = arg.event.end.toDateString()+' '+arg.event.end.getHours()+':'+arg.event.end.getMinutes()+':'+arg.event.end.getSeconds();
 
             $.ajax({
-              url:"/api/update.php",
+              url:url+"api/update.php",
               type:"POST",
               data:{id:arg.event.id, start:start, end:end},
             });
@@ -59,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
             $('#deleteEvent').attr('data-id', id); 
 
             $.ajax({
-              url:"/api/getevent.php",
+              url:url+"api/getevent.php",
               type:"POST",
               dataType: 'json',
               data:{id:id},
@@ -76,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
             $('body').on('click', '#deleteEvent', function() {
                 if(confirm("Are you sure you want to remove it?")) {
                     $.ajax({
-                        url:"/api/delete.php",
+                        url:url+"api/delete.php",
                         type:"POST",
                         data:{id:arg.event.id},
                     }); 
@@ -106,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // process the form
         $.ajax({
             type        : "POST",
-            url         : '/api/insert.php',
+            url         : url+'api/insert.php',
             data        : $(this).serialize(),
             dataType    : 'json',
             encode      : true
@@ -161,7 +164,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // process the form
         $.ajax({
             type        : "POST",
-            url         : '/api/update.php',
+            url         : url+'api/update.php',
             data        : {
                 id:id, 
                 title:title, 

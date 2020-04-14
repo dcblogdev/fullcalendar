@@ -1,5 +1,5 @@
 <?php
-include("../includes/config.php");
+include("../config.php");
 
 if (isset($_POST['id'])) {
     $row = $db->find("* FROM events where id=?", [$_POST['id']]);
