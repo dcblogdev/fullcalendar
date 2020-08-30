@@ -1,7 +1,7 @@
 <?php
 require('vendor/autoload.php');
 
-use Daveismyname\PdoWrapper\Database;
+use Dcblogdev\PdoWrapper\Database;
 
 $host = "localhost";
 $database = "calendar";
