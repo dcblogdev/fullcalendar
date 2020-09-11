@@ -3,10 +3,12 @@ require('vendor/autoload.php');
 
 use Dcblogdev\PdoWrapper\Database;
 
-$host = "localhost";
-$database = "calendar";
-$username = "root";
-$password = "";
+$options = [
+    'host' => "localhost",
+    'database' => "calendar",
+    'username' => "root",
+    'password' => ""
+];
+$db = new Database($options);
 
-$db = Database::get($username, $password, $database, $host);
 $dir = "./";
