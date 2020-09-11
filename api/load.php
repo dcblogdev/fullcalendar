@@ -2,7 +2,7 @@
 include("../config.php");
 $data = [];
 
-$result = $db->select("* FROM events ORDER BY id");
+$result = $db->rows("SELECT * FROM events ORDER BY id");
 foreach($result as $row) {
     $data[] = [
         'id'              => $row->id,
