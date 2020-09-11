@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    var url ='/';
+    var url ='./';
 
     $('body').on('click', '.datetimepicker', function() {
         $(this).not('.hasDateTimePicker').datetimepicker({
