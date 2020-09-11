@@ -29,7 +29,8 @@ document.addEventListener('DOMContentLoaded', function() {
         navLinks: true, // can click day/week names to navigate views
         businessHours: true, // display business hours
         editable: true,
-        defaultDate: '2020-04-07',
+        //uncomment to have a default date
+        //defaultDate: '2020-04-07',
         events: url+'api/load.php',
         eventDrop: function(arg) {
             var start = arg.event.start.toDateString()+' '+arg.event.start.getHours()+':'+arg.event.start.getMinutes()+':'+arg.event.start.getSeconds();
