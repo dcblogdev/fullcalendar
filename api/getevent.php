@@ -2,7 +2,7 @@
 include("../config.php");
 
 if (isset($_POST['id'])) {
-    $row = $db->find("* FROM events where id=?", [$_POST['id']]);
+    $row = $db->rows("SELECT * FROM events where id=?", [$_POST['id']]);
     $data = [
         'id'        => $row->id,
         'title'     => $row->title,
