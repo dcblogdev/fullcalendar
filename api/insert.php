@@ -7,7 +7,7 @@ if (isset($_POST['title'])) {
     $error      = null;
     $title      = $_POST['title'];
     $start      = $_POST['startDate'];
-    $end        = $_POST['startDate'];
+    $end        = $_POST['endDate'];
     $color      = $_POST['color'];
     $text_color = $_POST['text_color'];
 
